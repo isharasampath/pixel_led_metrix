@@ -3,4 +3,4 @@
 Simple pixel led driver circuit and firmware
 
 ## Firmware Dependancies
-* [FastLED](https://www.arduino.cc/reference/en/libraries/fastled/)
+* [FastLED version 3.4.0 or higher](https://www.arduino.cc/reference/en/libraries/fastled/)

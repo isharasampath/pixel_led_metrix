@@ -1,13 +1,13 @@
 #include "FastLED.h"
 #include <SD.h>
 
-#define COLUMNS 43
-#define ROWS  16
+#define COLUMNS 39 // NOTE: change the matrix column size according to your matrix.
+#define ROWS  16   // NOTE: change the matrix row size according to your matrix.
 #define CS_PIN  D8
 #define DATA_PIN D2
 
 byte frameData[COLUMNS * ROWS * 3];
-uint16_t delayTime = 100;
+uint16_t delayTime = 100; // NOTE: speed can be changed. Recommended min 50.
 uint16_t NUM_LEDS = COLUMNS * ROWS;
 unsigned long timer;
 boolean isReady = false;
@@ -55,9 +55,9 @@ void loop() {
 }
 
 void showFrame() {
-  int idxR = 0;
-  int idxG = 1;
-  int idxB = 2;
+  int idxR = 1;
+  int idxG = 2;
+  int idxB = 3;
   int _idxLed = 0;
   delayTime = frameData[0];
   for (int i = 0; i < COLUMNS; i++) {
